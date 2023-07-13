@@ -1,13 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
+  direction: rtl;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/iran-sans/eot/IRANSansWeb\(FaNum\).eot");
+  src: local(IRANSans),
+    url("./assets/fonts/iran-sans/eot/IRANSansWeb\(FaNum\).eot")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("./assets/fonts/iran-sans/woff2/IRANSansWeb\(FaNum\)_Medium.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("./assets/fonts/iran-sans/woff/IRANSansWeb\(FaNum\).woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("./assets/fonts/iran-sans/ttf/IRANSansWeb\(FaNum\).ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+* {
+  font-family: IRANSans !important;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+a {
+  font-family: IRANSans !important;
+  text-decoration: none;
 }
